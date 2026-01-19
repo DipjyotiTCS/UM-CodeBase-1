@@ -52,4 +52,9 @@ public class UserController {
     public String findOrgDetails(@RequestParam String email) {
         return userService.getOrgDetailsforEmployee(email);
     }
+
+    @GetMapping("/findDesignation")
+    public String findDesignation(@RequestParam String email) {
+        return userService.getEmployeeDesignation(email);
+    }
 }
